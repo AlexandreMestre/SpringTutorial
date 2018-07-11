@@ -24,9 +24,9 @@ Ao criar o projeto, você pode selecionar a opção para importar o PostgreSQL e
 
 ```java
 dependencies {
-    // add JPA repository dependece
+	// add JPA repository dependece
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
-    // add postgreSQL dependece
+	// add postgreSQL dependece
 	runtime('org.postgresql:postgresql')
 	...
 }
@@ -88,9 +88,9 @@ No nosso modelo, um time terá apenas um id e um nome:
 
 ``` java
 public class Team {
-
-	private Long id;
 	
+	private Long id;
+		
 	private String name;
 }
 ```
