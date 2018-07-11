@@ -70,7 +70,7 @@ Em model, temos as classes que modelam a aplicação: Apostas, Campeonatos, Part
 
 Em controller temos os endpoints, ou seja, o controller recebe requisições HTTP e as responde, acessando os services para isso.
 
-O service é responsável por realizar a comunicação entre o controller e o banco de dados, acessando o repositório para buscar os dados e formatando ele para entregar ao controller.
+O service é responsável por realizar a comunicação entre o controller e o banco de dados, acessando o repositório para buscar os dados e formatando eles para entregar ao controller.
 
 Por fim, o repositório é responsável por fazer as consultas ao banco de dados.
 
@@ -123,7 +123,7 @@ private Long id;
 ```
 A anotação **@generatedValue** faz com que os valores do id sejam gerados automaticamente, assim não precisamos nos preocupar em garantir que os ids sejam únicos.
 
-Por fim, vamos anotar o campo nome como uma coluna da tabela no banco de dados:
+Por fim, devemos anotar o campo nome como uma coluna da tabela no banco de dados:
 
 ```java
 @Column(nullable=false, unique=true)
@@ -160,7 +160,7 @@ public class TeamController {
 }
 ```
 
-Agora, vamos utilizar uma anotação para mapear o método getAllTeams a uma URL:
+Depois, utilizamos uma anotação para mapear o método getAllTeams a uma URL:
 
 ```java
 @RequestMapping("/teams")
@@ -314,7 +314,7 @@ public interface TeamRepository extends JpaRepository<Team, Long> {
 
 E agora, não precisamos fazer mais **NADA**. Ao definir a interface TeamRepository como herdeira de JpaRepository, o spring implementa automaticamente os métodos básicos para salvar, atualizar, remover, buscar todos e buscar por id.
 
-E, caso seja necessário utilizar métodos mais complexos, o spring também auxilia muito. Por exemplo, se quisessemos buscar um time pelo nome, bastaria definir um método utilizando um formato padrão, de forma que o spring compreendesse automaticamente o que aquele método deveria fazer e fizesse a implementação. Em outras palavras, basta apenas definir o método:
+E, caso seja necessário utilizar métodos mais complexos, o spring também auxilia muito. Por exemplo, se quisessemos buscar um time pelo nome, bastaria definir um método utilizando um formato padrão, de forma que o spring compreendesse automaticamente o que aquele método deveria fazer e implementasse ele pra você. Em outras palavras, basta apenas definir o método:
 
 ```java
 public interface TeamRepository extends JpaRepository<Team, Long> {
@@ -339,7 +339,7 @@ O segundo método se inicia com "count", indicando que deve contar a quantidade 
 
 Há ainda outras opções, como definir métodos para buscar informações e ordenar por algum campo. Então, se precisar de um método um pouco diferente, procure a documentação.
 
-Alguns exemplos da documntação são:
+Alguns exemplos da documentação são:
 
 ```java
 interface PersonRepository extends JpaRepository<User, Long> {
