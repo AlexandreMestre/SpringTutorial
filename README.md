@@ -344,3 +344,18 @@ As informações devem ser inseridas no formatdo JSON. As chaves devem ter o mes
 Note que nao é necessário inserir um ID para o aluno. O framework criará um automaticamente.
 
 
+#### GET
+
+Dentro do Postman, mude o método de POST para GET. Para requisições do tipo GET, nenhuma informação precisa ser passada no *body*.  
+Uma requisição na URL `http://localhost:8080/students` irá retornar um JSON com todos os estudantes.  
+Como também criamos um endpoint que recebe o ID de um estudante, é também possível usar a URL `http://localhost:8080/students/1` para retornar o estudante com ID 1.
+
+#### PUT
+
+Para atualizar os dados de um estudante, o procedimento é semelhante ao POST. A diferença está na URL, que deve especificar o ID do estudante. Os dados atualizados devem ser passados no corpo da requisição no formato JSON.
+
+#### DELETE
+
+Para remover um estudante do banco, basta fazer uma requisição DELETE informando o ID na URL. Assim, a URL `http://localhost:8080/students/1` remove o estudante de ID 1 do servidor.
+
+

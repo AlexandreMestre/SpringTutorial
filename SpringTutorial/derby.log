@@ -1,11 +1,11 @@
 ----------------------------------------------------------------
-Thu Jul 12 14:33:20 BRT 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.1.0 - (1808820): instance a816c00e-0164-8f8d-e961-00000b3ccd48 
-on database directory memory:/Users/alexandremestre/Desktop/SpringTutorial/testdb with class loader sun.misc.Launcher$AppClassLoader@4e25154f 
+Thu Jul 12 15:21:47 BRT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.1.0 - (1808820): instance a816c00e-0164-8fba-465d-00000e173680 
+on database directory memory:/Users/alexandremestre/Documents/BEPiD/Hive/SpringTutorial/SpringTutorial/testdb with class loader sun.misc.Launcher$AppClassLoader@4e25154f 
 Loaded from file:/Users/alexandremestre/.gradle/caches/modules-2/files-2.1/org.apache.derby/derby/10.14.1.0/3bcd8b1af3f8cd022d54d331e00064776be04f9c/derby-10.14.1.0.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_144-b01
-user.dir=/Users/alexandremestre/Desktop/SpringTutorial
+user.dir=/Users/alexandremestre/Documents/BEPiD/Hive/SpringTutorial/SpringTutorial
 os.name=Mac OS X
 os.arch=x86_64
 os.version=10.13.5
