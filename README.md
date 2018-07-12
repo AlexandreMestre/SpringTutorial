@@ -81,7 +81,8 @@ Clique em *Switch to the full version* [2] para ver todos os módulos selecioná
 Clique em **Generate Project**.
 
 ### 2 - Importando o projeto no Eclipse
-![](assets/eclipseImport.png)  
+<img src="assets/eclipseImport.png" width="250px"/>
+
 Dentro do Packet Manager do Eclipse, clique com o botão direito e escolha *Import*. Selecione *Gradle* e depois *Existing Gradle Project*. Em *Project Root Directory* escolha a pasta que foi criada pelo *Spring initializr* e clique em *Finish*.
 
 ### 3 - Criando Endpoints
