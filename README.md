@@ -3,11 +3,12 @@
 ## REST
 É um estilo de arquitetura que define um conjunto de restrições e propriedades baseados em HTTP. Web Services que obedecem ao estilo arquitetural REST são chamados RESTful e fornecem interoperabilidade entre sistemas de computadores na Internet. Os web services compatíveis com REST permitem que os sistemas solicitantes acessem e manipulem representações textuais de recursos da Web usando um conjunto uniforme e predefinido de operações **sem estado**.
 
-### Métodos HTTP
-#### GET
-Requisição de informação:
+### Métodos HTTP - Exemplos
+#### GET - Requisição de informação
 
 `http://localhost:8080/teams`
+
+Retorno:
 
 ```json
 [
@@ -33,10 +34,11 @@ Requisição de informação:
     }
 ]
 ```
-#### POST
-Inserção de informação:
+#### POST - Inserção de informação
 
 `http://localhost:8080/teams`
+
+Envio:
 
 ```json
 {
@@ -44,10 +46,11 @@ Inserção de informação:
 	"name": "Spain"
 }
 ```
-#### PUT
-Atualização de informação:
+#### PUT - Atualização de informação
 
 `http://localhost:8080/teams/5`
+
+Envio de uma estrutura modificada:
 
 ```json
 {
@@ -56,8 +59,9 @@ Atualização de informação:
 }
 ```
 
-#### DELETE
-Remoção de informação:
+#### DELETE - Remoção de informação
+
+Remoção da estrutura com ID 5:
 
 `http://localhost:8080/teams/5`
 
