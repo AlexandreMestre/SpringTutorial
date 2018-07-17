@@ -248,6 +248,11 @@ public class StudentService {
 		}	
 	}
 	
+	@RequestMapping("/students/{id}")
+	public Student getStudentById(@PathVariable Long id) {
+		return studentService.getStudentById(id);
+	}
+	
 	public void addStudent(Student student) {
 		studentRepository.save(student);
 	}
