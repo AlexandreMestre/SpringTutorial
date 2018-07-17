@@ -1,6 +1,9 @@
 package com.example.SpringTutorial.controller;
 
 import java.util.List;
+
+import javax.persistence.EntityNotFoundException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,6 +38,14 @@ public class StudentController {
 	
 	@RequestMapping(method=RequestMethod.PUT, value="/students/{id}")
 	public void updateStudent(@RequestBody Student student, @PathVariable Long id) {
+		
+		if (id != student.getId()) {
+			// throw error if path id is not the same
+			// than the one passed in request body
+			
+			return;
+		}
+		
 		studentService.updateStudent(id, student);
 	}
 	

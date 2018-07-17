@@ -197,7 +197,7 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
 }
 ```
 
-### 5 - Exception
+### 6 - Exception
 Quando algo inesperado ocorre no servidor, devemos apresentar uma Exception. No caso vamos criar somente a Exception para caso uma entidade não seja encontrada no repositório:  
 
 ```java
@@ -214,7 +214,7 @@ public class EntityNotFoundException extends RuntimeException {
 }
 
 ```
-### 6 - Criação do Service
+### 7 - Criação do Service
 Para gerenciar as requisições feitas nos endpoints e realizar a conexão com o repositório, criaremos um serviço para cada entidade. A classe de serviço deve ser anotada com `@Service`. Além disso, é possível conectar o serviço com o repositório automaticamente através da anotação `@AutoWired`, eliminando a necessidade de realizar a instanciação. Os métodos criados para o serviço são utilizados pelo Controller e abstraem a conexão com o repositório:
 
 ```java
@@ -272,7 +272,7 @@ public class StudentService {
 }
 ```
 
-### 7 - Endpoint - Students
+### 8 - Endpoint - Students
 Vamos criar um novo Controller para mapear os endpoints relacionados à entidade Student. Através desses endpoints será realizada a inserção, atualização, requisição e deleção de informações relativas aos alunos.  
 Cada endpoint contém uma anotação indicando o tipo de request HTTP relacionado (GET, POST, PUT, DELETE). Quando necessário, o caminho relacionado ao endpoint contém o atributo {id}, que relaciona automaticamente o id digitado na URL com a variável id da assinatura do método.  
 Em algumas requisições é necessário enviar um dado do tipo Student para o servidor, como é o caso das requisições POST e PUT. A anotação `@RequestBody` na assinatura do método indica ao framework que aquela variável está contida no corpo da requisição e, assim, a relação é feita automaticamente.
@@ -325,7 +325,7 @@ public class StudentController {
 }
 ```
 
-### 8 - Testando a API
+### 9 - Testando a API
 Para realizar os testes vamos utilizar o Postman. Como nosso repositório começa vazio, vamos primeiro realizar a inserção de alguns dados.
 
 #### POST
