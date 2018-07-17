@@ -248,11 +248,6 @@ public class StudentService {
 		}	
 	}
 	
-	@RequestMapping("/students/{id}")
-	public Student getStudentById(@PathVariable Long id) {
-		return studentService.getStudentById(id);
-	}
-	
 	public void addStudent(Student student) {
 		studentRepository.save(student);
 	}
@@ -305,6 +300,11 @@ public class StudentController {
 	@RequestMapping("/students")
 	public List<Student> getAllStudents() {
 		return studentService.getAllStudents();
+	}
+	
+	@RequestMapping("/students/{id}")
+	public Student getStudentById(@PathVariable Long id) {
+		return studentService.getStudentById(id);
 	}
 	
 	@RequestMapping(method=RequestMethod.POST, value="/students")
